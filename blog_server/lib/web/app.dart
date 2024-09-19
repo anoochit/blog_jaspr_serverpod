@@ -1,8 +1,8 @@
-import 'package:blog_server/web/pages/not_found.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
 import 'pages/home.dart';
+import 'pages/not_found.dart';
 import 'pages/post.dart';
 
 class App extends StatelessComponent {
