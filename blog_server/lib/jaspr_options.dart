@@ -3,7 +3,7 @@
 
 import 'package:jaspr/jaspr.dart';
 
-import 'src/web/components/counter.dart' as c0;
+import 'web/components/counter.dart' as c0;
 
 /// Default [JasprOptions] for use with your jaspr project.
 ///
@@ -23,6 +23,6 @@ import 'src/web/components/counter.dart' as c0;
 /// ```
 const defaultJasprOptions = JasprOptions(
   targets: {
-    c0.Counter: ClientTarget<c0.Counter>('src/web/components/counter'),
+    c0.Counter: ClientTarget<c0.Counter>('web/components/counter'),
   },
 );
