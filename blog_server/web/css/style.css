@@ -2,11 +2,11 @@ html {
     box-sizing: border-box;
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-    background: url('/images/background.svg') no-repeat center center fixed; 
+    /* background: url('/images/background.svg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
 }
 
 *, *:before, *:after {
@@ -39,17 +39,27 @@ hr {
     background: #999;
 }
 
+#counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#counter_value {
+    margin-bottom: 20px;
+}
+
 .content {
-    min-width: 300px;
+    /* min-width: 300px; */
     position: absolute;
     left: 50%;
     top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    /* -webkit-transform: translate(-50%, -50%); */
+    /* transform: translate(-50%, -50%); */
     background-color: white;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* border-radius: 8px; */
+    /* padding: 16px; */
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .logo-box a {

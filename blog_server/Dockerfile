@@ -6,7 +6,7 @@ COPY . .
 RUN dart pub global activate jaspr_cli
 RUN dart pub get
 # RUN dart compile exe bin/main.dart -o bin/server
-RUN jaspr build -i lib/main.dart -v
+RUN jaspr build -i bin/main.dart -v
 
 FROM alpine:latest
 
