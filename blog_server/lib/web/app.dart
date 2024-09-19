@@ -1,3 +1,4 @@
+import 'package:blog_server/web/pages/about.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
@@ -21,6 +22,10 @@ class App extends StatelessComponent {
           path: '/post/:postId',
           builder: (context, state) =>
               PostPage(id: int.tryParse(state.params['postId']!) ?? 0),
+        ),
+        Route(
+          path: '/about',
+          builder: (context, state) => AboutPage(),
         ),
       ],
     );
