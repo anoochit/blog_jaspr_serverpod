@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:16.3
+    ports:
+      - '8090:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: blog
+      POSTGRES_PASSWORD: "nLWNBrn65ogh6SzeKvYFJYa06t89DXhB"
+    volumes:
+      - blog_data:/var/lib/postgresql/data
+  redis:
+    image: redis:6.2.6
+    ports:
+      - '8091:6379'
+    command: redis-server --requirepass "J9aGv9LybYHaFtBgxRxfN8AhEnCqkWiG"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+volumes:
+  blog_data:
