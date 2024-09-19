@@ -9,8 +9,8 @@ class BlogPage extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div([Navigation()]);
 
-    yield div(classes: 'md:container md:mx-auto', [
-      h1(classes: 'text-3xl font-bold', [Text('Blog')])
+    yield div([
+      h1([Text('Blog')])
     ]);
   }
 }

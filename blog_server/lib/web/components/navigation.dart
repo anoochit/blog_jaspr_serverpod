@@ -10,7 +10,7 @@ class Navigation extends StatefulComponent {
 class _NavigationState extends State<Navigation> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield nav(classes: 'flex justify-center space-x-4', [
+    yield nav([
       a([Text('Home')], href: '/'),
       a([Text('Blog')], href: '/blog'),
       a([Text('About')], href: '/about'),

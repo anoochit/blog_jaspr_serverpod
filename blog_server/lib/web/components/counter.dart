@@ -13,7 +13,7 @@ class _CounterState extends State<Counter> {
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield span(id: "counter_value", [text("$counter")]);
+    yield span([text("$counter")]);
     yield button(onClick: () {
       setState(() {
         counter++;
