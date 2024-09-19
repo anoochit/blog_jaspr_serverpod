@@ -20,7 +20,7 @@ class App extends StatelessComponent {
         Route(
           path: '/post/:postId',
           builder: (context, state) =>
-              PostPage(id: state.params['postId'] ?? ''),
+              PostPage(id: int.tryParse(state.params['postId']!) ?? 0),
         ),
       ],
     );

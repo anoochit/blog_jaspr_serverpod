@@ -1,10 +1,10 @@
-version: '3.7'
+version: "3.7"
 
 services:
   postgres:
     image: postgres:16.3
     ports:
-      - '8090:5432'
+      - "8090:5432"
     environment:
       POSTGRES_USER: postgres
       POSTGRES_DB: blog
@@ -14,9 +14,30 @@ services:
   redis:
     image: redis:6.2.6
     ports:
-      - '8091:6379'
+      - "8091:6379"
     command: redis-server --requirepass "J9aGv9LybYHaFtBgxRxfN8AhEnCqkWiG"
     environment:
       - REDIS_REPLICATION_MODE=master
+
+  adminer:
+    image: adminer
+    depends_on:
+      - "postgres"
+    ports:
+      - 8092:8080
+
+  minio:
+    image: minio/minio
+    ports:
+      - "9000:9000"
+      - "9901:9901"
+    volumes:
+      - minio_data:/data
+    environment:
+      MINIO_ROOT_USER: "minio"
+      MINIO_ROOT_PASSWORD: "v4f2EpmS7HLBsL_vIybQlBiaFeZW5cW4"
+    command: server --address "0.0.0.0:9900" --console-address ":9901" /data
+
 volumes:
   blog_data:
+  minio_data:

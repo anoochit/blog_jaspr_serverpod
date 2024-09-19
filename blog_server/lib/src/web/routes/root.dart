@@ -18,7 +18,7 @@ class RootRoute extends JasprRoute {
       head: [
         link(rel: "stylesheet", href: "/css/style.css"),
       ],
-      // body with home component
+      // app with route
       body: App(),
     );
   }

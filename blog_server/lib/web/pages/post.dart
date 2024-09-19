@@ -3,7 +3,7 @@ import 'package:jaspr/jaspr.dart';
 class PostPage extends StatelessComponent {
   const PostPage({super.key, required this.id});
 
-  final String id;
+  final int id;
 
   @override
   Iterable<Component> build(BuildContext context) sync* {
