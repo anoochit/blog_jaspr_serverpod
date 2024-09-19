@@ -5,9 +5,10 @@ import 'package:blog_server/src/web/routes/root.dart';
 import 'src/generated/protocol.dart';
 import 'src/generated/endpoints.dart';
 
+// TODO : add jaspr
 import 'package:jaspr/jaspr.dart';
 
-// rub `jaspr serve` to generate this file.
+//TODO : add `jaspr_options.dart` then run `jaspr serve` to generate this file.
 import 'jaspr_options.dart';
 
 // This is the starting point of your Serverpod server. In most cases, you will
@@ -22,13 +23,16 @@ void run(List<String> args) async {
     Endpoints(),
   );
 
+  // TODO : init jaspr
   Jaspr.initializeApp(options: defaultJasprOptions, useIsolates: false);
 
   // If you are using any future calls, they need to be registered here.
   // pod.registerFutureCall(ExampleFutureCall(), 'exampleFutureCall');
 
   // Setup a default page at the web root.
+  // TODO : replace root route with jasr route
   pod.webServer.addRoute(RootRoute(), '/*');
+
   // pod.webServer.addRoute(RouteRoot(), '/');
   // pod.webServer.addRoute(RouteRoot(), '/index.html');
   // Serve all files in the /static directory.

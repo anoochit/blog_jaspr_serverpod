@@ -1,15 +1,4 @@
-// import 'dart:io';
-
-// import 'package:blog_server/src/web/widgets/default_page_widget.dart';
-// import 'package:serverpod/serverpod.dart';
-
-// class RouteRoot extends WidgetRoute {
-//   @override
-//   Future<Widget> build(Session session, HttpRequest request) async {
-//     return DefaultPageWidget();
-//   }
-// }
-
+// TODO : create jaspr route
 import 'dart:io';
 
 import 'package:jaspr/server.dart';
@@ -21,11 +10,15 @@ import '../components/home.dart';
 class RootRoute extends JasprRoute {
   @override
   Future<Component> build(Session session, HttpRequest request) async {
+    // html page
     return Document(
-      title: "Built with Serverpod & Jaspr",
+      // title
+      title: "Blog : Built with Serverpod & Jaspr",
+      // header
       head: [
         link(rel: "stylesheet", href: "/css/style.css"),
       ],
+      // body with home component
       body: Home(),
     );
   }
