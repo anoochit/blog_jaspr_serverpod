@@ -10,10 +10,19 @@ class Navigation extends StatefulComponent {
 class _NavigationState extends State<Navigation> {
   @override
   Iterable<Component> build(BuildContext context) sync* {
-    yield nav([
-      a([Text('Home')], href: '/'),
-      a([Text('Blog')], href: '/blog'),
-      a([Text('About')], href: '/about'),
+    yield nav(classes: 'flex justify-center space-x-4', [
+      a(
+          classes: 'px-2 py-3 hover:text-purple-600 hover:underline',
+          [Text('Home')],
+          href: '/'),
+      a(
+          classes: 'px-2 py-3 hover:text-purple-600 hover:underline',
+          [Text('Blog')],
+          href: '/blog'),
+      a(
+          classes: 'px-2 py-3 hover:text-purple-600 hover:underline',
+          [Text('About')],
+          href: '/about'),
     ]);
   }
 }

@@ -14,6 +14,7 @@ class RootRoute extends JasprRoute {
     return Document(
       // title
       title: "Blog : Built with Serverpod & Jaspr",
+      lang: "en",
       // header
       head: [
         link(href: 'styles.css', rel: 'stylesheet'),

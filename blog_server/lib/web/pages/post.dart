@@ -1,6 +1,7 @@
 import 'package:jaspr/jaspr.dart';
 
 import '../components/navigation.dart';
+import '../components/page_title.dart';
 
 class PostPage extends StatelessComponent {
   const PostPage({super.key, required this.id});
@@ -9,9 +10,6 @@ class PostPage extends StatelessComponent {
   Iterable<Component> build(BuildContext context) sync* {
     yield div([Navigation()]);
 
-    yield div([
-      h1([Text('Post')]),
-      Text('Id = $id')
-    ]);
+    yield PageTitle(title: 'Home');
   }
 }
