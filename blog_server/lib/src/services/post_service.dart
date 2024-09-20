@@ -1,15 +1,15 @@
 import 'package:serverpod/serverpod.dart';
 
-import '../generated/post.dart';
+import '../generated/protocol.dart';
 
 class PostService {
   // get posts
-  Future<List<Post>> getPosts(Session session) async {
+  static Future<List<Post>> getPosts(Session session) async {
     return await Post.db.find(session);
   }
 
   // get post by id
-  Future<Post?> getPostById(Session session, int id) async {
+  static Future<Post?> getPostById(Session session, int id) async {
     return await Post.db.findById(session, id);
   }
 }
