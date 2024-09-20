@@ -11,14 +11,14 @@ class PostPage extends StatelessComponent {
   @override
   Iterable<Component> build(BuildContext context) sync* {
     yield div(classes: 'container sm:mx-auto md:mx-auto lg:mx-auto mx-2', [
+      // header
       PageHeader(),
+      // post content
       AsyncBuilder(builder: (context) async* {
         var post = await PostService.getPostById(context.session, id);
-
         if (post != null) {
           final title = post.title;
           final content = post.content;
-
           final url = '/post/${post.id}';
 
           yield PostItem(title: title, url: url, content: content);

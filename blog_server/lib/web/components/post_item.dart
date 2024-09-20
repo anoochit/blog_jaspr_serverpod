@@ -16,7 +16,7 @@ class PostItem extends StatelessComponent {
     yield div(
       classes: 'py-2 px-2',
       [
-        div(classes: 'py-2', [
+        div(classes: 'py-4', [
           a([
             h2(
                 classes:
@@ -25,7 +25,7 @@ class PostItem extends StatelessComponent {
           ], href: url)
         ]),
         div([
-          p([Text(content)])
+          p([RawText(content.replaceAll('\n', '</br>'))])
         ])
       ],
     );
