@@ -12,7 +12,7 @@ class Avatar extends StatelessComponent {
           img(
               classes: 'h-32 w-32 rounded-full',
               alt: 'avatar',
-              src: 'https://avatars.githubusercontent.com/u/1182518?v=4')
+              src: '/images/avatar.webp')
         ], href: '#')
       ],
     );
