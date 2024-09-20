@@ -1,8 +1,8 @@
-import 'package:blog_server/web/pages/about.dart';
-import 'package:blog_server/web/pages/blog.dart';
 import 'package:jaspr/server.dart';
 import 'package:jaspr_router/jaspr_router.dart';
 
+import 'pages/about.dart';
+import 'pages/blog.dart';
 import 'pages/home.dart';
 import 'pages/not_found.dart';
 import 'pages/post.dart';
