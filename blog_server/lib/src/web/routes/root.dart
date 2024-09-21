@@ -23,8 +23,6 @@ class RootRoute extends JasprRoute {
       meta: {
         "description": "A personal technology blog about Dart, Flutter.",
         "keywords": "Dart, Flutter, Serverpod, Jaspr",
-        // "og:title": "A personal technology blog about Dart, Flutter.",
-        // "og:image": "",
       },
       // app with route
       body: App(),
